@@ -9,7 +9,11 @@
 def seconds_to_hms(total_seconds):
     # TODO (Part 1): return the time as a string "H:MM:SS"
     #   e.g. seconds_to_hms(3661) should return "1:01:01"
-    pass
+    hours: int = total_seconds // 3600
+    minutes: int = (total_seconds % 3600) // 60
+    seconds: int = total_seconds % 60
+    return f"{hours}:{minutes:02d}:{seconds:02d}"
+    
 
 
 def admission_price(age):
