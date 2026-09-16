@@ -18,19 +18,34 @@ def seconds_to_hms(total_seconds):
 
 def admission_price(age):
     # TODO (Part 2): return the ticket price (a number) for someone of this age
-    pass
+    if age < 5:
+        return 0.00
+    elif age >= 5 and age <= 12:
+        return 8.00
+    elif age >= 13 and age <= 64:
+        return 15.00
+    else:
+        return 10.00
 
 
 def sum_multiples(limit):
     # TODO (Part 3): return the sum of every whole number below `limit`
     #   that is a multiple of 3 or of 5
-    pass
+    total: int = 0
+    for i in range(limit):
+        if i % 3 == 0 or i % 5 == 0:
+            total += i
+    return total
 
 
 def total_of_positives(numbers):
     # TODO (Part 4 - STRETCH, optional): return the sum of just the
     #   positive numbers in the list `numbers`
-    pass
+    total: int = 0
+    for num in numbers:
+        if num > 0:
+            total += num
+    return total
 
 
 def main():
